@@ -1,10 +1,7 @@
 package java_collection.queue.queue_interface.implementation;
-
 class Node{
-
     int data;
     Node next;
-
     Node(int data){
         this.data = data;
         this.next = null;
@@ -32,7 +29,5 @@ public class implement_using_linkedList {
     int peek(){
         if(front == null) return -1;
         return front.data;
-    }
-
-    
+    }    
 }

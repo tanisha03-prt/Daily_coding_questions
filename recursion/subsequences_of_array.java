@@ -26,3 +26,27 @@ public class subsequences_of_array {
         subsequence(0, arr, new ArrayList<>());
     }
 }
+
+
+
+
+
+// class Main
+// {
+//     static void sub(int arr[], int i, String ans)
+//     {
+//         if(i == arr.length)
+//         {
+//             System.out.println(ans);
+//             return;
+//         }
+//         sub(arr, i + 1, ans + arr[i] + " ");
+//         sub(arr, i + 1, ans);
+//     }
+
+//     public static void main(String[] args)
+//     {
+//         int arr[] = {1,2,3};
+//         sub(arr,0,"");
+//     }
+// }

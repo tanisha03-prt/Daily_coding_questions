@@ -3,13 +3,13 @@ import java.util.*;
 public class rotten_oranges {
 
     class Pair {
-        int i;
-        int j;
+        int r;
+        int c;
         int time;
 
-        Pair(int i, int j, int time) {
-            this.i = i;
-            this.j = j;
+        Pair(int r, int c, int time) {
+            this.r = r;
+            this.c = c;
             this.time = time;
         }
     }
@@ -25,13 +25,13 @@ public class rotten_oranges {
         int fresh = 0;
 
         // Push all rotten oranges into queue
-        for(int i = 0; i < n; i++) {
-            for(int j = 0; j < m; j++) {
-                if(grid[i][j] == 2) {
-                    q.offer(new Pair(i, j, 0));
-                    visited[i][j] = true;
+        for(int r = 0; r < n; r++) {
+            for(int c = 0; c < m; c++) {
+                if(grid[r][c] == 2) {
+                    q.offer(new Pair(r, c, 0));
+                    visited[r][c] = true;
                 }
-                else if(grid[i][j] == 1) {
+                else if(grid[r][c] == 1) {
                     fresh++;
                 }
             }
@@ -47,8 +47,8 @@ public class rotten_oranges {
         int time = 0;
         while(!q.isEmpty()) {
             Pair curr = q.poll();
-            int row = curr.i;
-            int col = curr.j;
+            int row = curr.r;
+            int col = curr.c;
             int t = curr.time;
             time = Math.max(time, t);
             for(int[] d : dir) {

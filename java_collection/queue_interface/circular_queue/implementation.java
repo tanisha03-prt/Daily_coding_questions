@@ -20,11 +20,8 @@ public class implementation {
         }
         int dequeue(){
             if(front == -1) return -1;
-            if(front == rear){
-                front = rear = -1;
-            }else{
-                front = (front+1) % size;
-            }
+            if(front == rear) front = rear = -1;
+            front = (front+1) % size;
             return arr[front];
         }
         int peek(){

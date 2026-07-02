@@ -27,3 +27,30 @@ public class count_subsequence_with_sum_k {
     }
     
 }
+
+
+
+
+// class Main
+// {
+//     static int count(int arr[], int i,
+//                      int sum, int target)
+//     {
+//         if(i == arr.length)
+//         {
+//             if(sum == target)
+//                 return 1;
+//             return 0;
+//         }
+//         return count(arr,i+1,
+//                      sum+arr[i],target)
+//              + count(arr,i+1,
+//                      sum,target);
+//     }
+
+//     public static void main(String[] args)
+//     {
+//         int arr[] = {1,2,1};
+//         System.out.println(count(arr,0,0,2));
+//     }
+// }

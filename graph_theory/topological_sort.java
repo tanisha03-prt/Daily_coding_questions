@@ -9,24 +9,17 @@ public class topological_sort{
                 dfs(i, adj, visited, st);
             }
         }
-        ArrayList<Integer> ans =
-                new ArrayList<>();
+        ArrayList<Integer> ans = new ArrayList<>();
         while(!st.isEmpty()) {
             ans.add(st.pop());
         }
         return ans;
     }
-    static void dfs(int node,
-                    ArrayList<ArrayList<Integer>> adj,
-                    boolean[] visited,
-                    Stack<Integer> st) {
+    static void dfs(int node, ArrayList<ArrayList<Integer>> adj, boolean[] visited, Stack<Integer> st) {
         visited[node] = true;
         for(int neighbour : adj.get(node)) {
             if(!visited[neighbour]) {
-                dfs(neighbour,
-                    adj,
-                    visited,
-                    st);
+                dfs(neighbour, adj, visited, st);
             }
         }
         st.push(node);

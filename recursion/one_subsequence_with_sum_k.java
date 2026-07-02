@@ -12,19 +12,15 @@ public class one_subsequence_with_sum_k {
             }
             return false;
         }
-
         // pick
         ds.add(arr[i]);
         sum += arr[i];
-
         if(subsequence(i + 1, arr, ds, sum, k) == true){
             return true;
         }
-
         // backtrack
         sum -= arr[i];
         ds.remove(ds.size() - 1);
-
         // not pick
         if(subsequence(i + 1, arr, ds, sum, k) == true){
             return true;

@@ -25,12 +25,7 @@ public class distance_of_nearest_cell_having_1 {
                 }
             }
         }
-        int[][] dir = {
-            {0,1},
-            {-1,0},
-            {1,0},
-            {0,-1}
-        };
+        int[][] dir = {{0,1},{-1,0},{1,0},{0,-1}};
         while(!q.isEmpty()) {
             Pair curr = q.poll();
             int r = curr.row;
@@ -40,18 +35,16 @@ public class distance_of_nearest_cell_having_1 {
             for(int[] d : dir) {
                 int nr = r + d[0];
                 int nc = c + d[1];
-                if(nr >= 0 && nc >= 0 &&
-                   nr < n && nc < m &&
-                   !visited[nr][nc]) {
+                if(nr >= 0 && nc >= 0 && nr < n && nc < m && !visited[nr][nc]) {
                     visited[nr][nc] = true;
-                    q.offer(new Pair(
-                        nr,
-                        nc,
-                        dist + 1
-                    ));
+                    q.offer(new Pair(nr,nc,dist + 1));
                 }
             }
         }
         return ans;
     }
 }
+
+
+
+

@@ -13,7 +13,7 @@ public class count_occurrences_of_anagrams {
         for(int right =0;right<txt.length();right++){
             char ch = txt.charAt(right);
             map.put(ch,map.getOrDefault(ch,0)+1);
-            if(right-left+1>n){
+            if(right-left+1 > n){
                 char c = txt.charAt(left);
                 map.put(c,map.get(c)-1);
                 if(map.get(c) == 0){

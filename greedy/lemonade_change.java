@@ -4,10 +4,10 @@ public class lemonade_change {
     public boolean lemonadeChange(int[] bills) {
         int five = 0;
         int ten = 0;
-        for(int bill : bills){
-            if(bill == 5){
+        for(int i : bills){
+            if(bills[i] == 5){
                 five++;
-            }else if(bill == 10){
+            }else if(bills[i] == 10){
                 if(five == 0){
                     return false;
                 }
@@ -17,7 +17,7 @@ public class lemonade_change {
                 if(ten > 0 && five > 0){
                     ten--;
                     five--;
-                }else if(five >= 3){
+                }else if(five == 3){
                     five -= 3;
                 }else{
                     return false;

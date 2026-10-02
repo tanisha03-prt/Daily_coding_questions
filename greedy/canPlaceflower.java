@@ -17,10 +17,7 @@ public class canPlaceflower {
 
         // Middle
         for(int i = 1; i < len - 1; i++) {
-            if(n > 0 &&
-               flowerbed[i] == 0 &&
-               flowerbed[i-1] == 0 &&
-               flowerbed[i+1] == 0) {
+            if(n > 0 && flowerbed[i] == 0 && flowerbed[i-1] == 0 && flowerbed[i+1] == 0) {
                 flowerbed[i] = 1;
                 n--;
             }

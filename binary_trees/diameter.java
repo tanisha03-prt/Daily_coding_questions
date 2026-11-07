@@ -2,6 +2,10 @@ package binary_trees;
 
 public class diameter {
     int diameter = 0;
+    public int dia(Node root){
+        height(root);
+        return diameter;
+    }
     int height(Node root){
         if(root == null) return 0;
 
